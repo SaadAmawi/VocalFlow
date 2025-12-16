@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
-import { StopCircle, RefreshCw, Video } from 'lucide-react';
+import { StopCircle, RefreshCw } from 'lucide-react';
 
 interface VideoRecorderProps {
   onRecordingComplete: (blob: Blob) => void;
@@ -9,9 +9,7 @@ interface VideoRecorderProps {
 
 const VideoRecorder: React.FC<VideoRecorderProps> = ({ 
   onRecordingComplete, 
-  maxDurationSeconds = 60,
-  label = "Record Video"
-}) => {
+  maxDurationSeconds = 60}) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const [isRecording, setIsRecording] = useState(false);

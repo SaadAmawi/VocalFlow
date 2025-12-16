@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { InterviewFlow, Answer } from '../types';
 import VideoRecorder from './VideoRecorder';
 import { analyzeVideoResponse } from '../services/geminiService';
-import { ArrowRight, CheckCircle, Loader2, PlayCircle, Video, Mic } from 'lucide-react';
+import { ArrowRight, Loader2, Video } from 'lucide-react';
 
 interface InterviewSessionProps {
   flow: InterviewFlow;
