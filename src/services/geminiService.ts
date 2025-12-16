@@ -103,7 +103,6 @@ export const analyzeVideoResponse = async (
 
   } catch (error) {
     console.error("Error analyzing video with Gemini:", error);
-    console.error(`key is: ${GEMINI_API_KEY}`)
     // Return a fallback error object if analysis fails to avoid crashing the flow
     return {
       transcription: "Error analyzing video.",
